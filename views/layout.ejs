@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+  <head>
+    <title>PassportJS Auth</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">    
+    <!-- Created by shekhar Prasad Rajak  follow me on github for more awesome repo : www.github.com/shekharrajak -->
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/animate.css">
+    <link rel="stylesheet" href="/styles/bootedit.css">
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/editor.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+    
+   
+  <!-- <script type="text/javascript">
+       loggedIn: function () {
+    if (req.user) {
+        return true;
+    } else {
+        return false;
+      }
+  }
+    </script> -->
+    <!--STYLES END-->
+  </head>
+
+
+  <body>
+    <nav id="navbarHeaderNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button id="navbarMenuToggler" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a id="navbarBrandLink" class="unselectable navbar-brand" href="/">PassportJS Auth</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul id="westNavbarHeader" class="nav navbar-nav">
+            <!--  <li><a id="savedFormLink" href="/">Home</a></li>
+            <li><a id="savedFormLink" href="/forms">Book</a></li>
+            
+             <li><a id="book" href="#bookForm" style="color:#5697CD;">Book</a></li> -->
+             
+
+        <!--     <li><a id="sponsorsLink" href="/sponsors">Buy</a></li> -->
+           
+           
+        </ul>
+
+        <ul id="eastNavHeaderMenu" class="nav navbar-nav navbar-right">
+            
+               <% if (req.user) { %>
+
+       
+            <li id="northeastDropDown" class="dropdown">
+              <a id="northeastDropDownLink" href="#" class="dropdown-toggle" data-toggle="dropdown"><%= req.user.email %> <b class="caret"></b></a>
+              <ul id="northeastDropDownMenu" class="dropdown-menu">
+                <li><a id="userProfileLink" href="/myprofile">My Profile</a></li>
+                <li><a id="termsOfServiceLink" href="/eula">End User License</a></li>
+                <li><a id="privacyPolicyLink" href="/privacy">Privacy Page</a></li>
+                <li><a id="aboutLink" href="/about">About</a></li>
+                <li><a id="glossaryLink" href="/glossary">Glossary</a></li>
+                <li class="divider"></li>
+                <li><a href="/logout">Sign-Out</a></li>
+              </ul>
+            </li>
+             <% } %>
+             <% if (!req.user) { %>
+      <li><a href="/login">Sign In</a></li>
+      <li><a href="/signup">Sign Up</a></li>
+      <% } %>
+
+           
+    
+
+
+        </ul>
+        </div>
+    </div>
+  </nav>
+  
+
+    <%- body %>
+    <!--
+    <script src="/vendor/requirejs/require.js" data-main="/js/main"></script> 
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/angular/angular.js"></script>
+    <script src="/js/dependencies/bootstrap/bootstrap.js"></script>
+    <script src="/js/dependencies/jquery/jquery.js"></script> 
+
+       -->
+  
+  
+
+  </body>
+</html>
